@@ -1,12 +1,12 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page pageEncoding="UTF-8" isELIgnored="false" %>
+<%@page isELIgnored="false" pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title>add Emp</title>
+    <title>update Emp</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css"
-          href="${pageContext.request.contextPath}/css/style.css"/>
+          href="${pageContext.request.contextPath}/src/main/webapp/static/css/style.css"/>
 </head>
 
 <body>
@@ -32,17 +32,26 @@
             <p id="whereami">
             </p>
             <h1>
-                add Emp info:
+                update Emp info:
             </h1>
-            <form action="${pageContext.request.contextPath}/emp/addEmp" method="post">
+            <form action="${pageContext.request.contextPath}/emp/changeEmp" method="post">
                 <table cellpadding="0" cellspacing="0" border="0"
                        class="form_table">
+                    <tr>
+                        <td valign="middle" align="right">
+                            id:
+                        </td>
+                        <td valign="middle" align="left">
+                            1
+                            <input type="hidden" name="id" value="${emp.id}">
+                        </td>
+                    </tr>
                     <tr>
                         <td valign="middle" align="right">
                             name:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="name"/>
+                            <input type="text" class="inputgri" name="name" value="${emp.name}"/>
                         </td>
                     </tr>
                     <tr>
@@ -50,7 +59,7 @@
                             salary:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="salary"/>
+                            <input type="text" class="inputgri" name="salary" value="${emp.salary}"/>
                         </td>
                     </tr>
                     <tr>
@@ -58,7 +67,7 @@
                             age:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="age"/>
+                            <input type="text" class="inputgri" name="age" value="${emp.age}"/>
                         </td>
                     </tr>
                     <tr>
@@ -66,7 +75,8 @@
                             birthday:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="date" class="inputgri" name="bir">
+                            <input type="date" class="inputgri" name="bir"
+                                   value="<fmt:formatDate value='${emp.bir}' pattern='yyyy-MM-dd'/>"/>
                         </td>
                     </tr>
                 </table>

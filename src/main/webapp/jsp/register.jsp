@@ -5,8 +5,10 @@
 <head>
     <title>regist</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.8.3.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="${pageContext.request.contextPath}/src/main/webapp/static/css/style.css"/>
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath}/src/main/webapp/static/js/jquery-1.8.3.js"></script>
     <script type="text/javascript">
         $(function () {
             //错误提示
