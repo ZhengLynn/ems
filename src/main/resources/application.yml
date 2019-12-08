@@ -1,0 +1,25 @@
+server:
+  port: 8989
+  servlet:
+    context-path: /ems
+    jsp:
+      init-parameters:
+        development: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/ems
+    username: root
+    password: root
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+mybatis:
+  mapper-locations: com/baizhi/mapper/*Mapper.xml
+  type-aliases-package: com.baizhi.entity
+logging:
+  level:
+    root: info
+    com.baizhi.dao: debug
